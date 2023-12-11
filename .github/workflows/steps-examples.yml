@@ -1,22 +1,18 @@
-name: Build and Deploy
+name: steps examples
+
 on:
-   workflow_dispatch
   push:
     branches:
-      - master
+      - main
 
 jobs:
-  deploy:
-    name: Deploy
+  jobx:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@master
-      - name: Install Dependencies
-        run: npm install
-      - name: Deploy to Codepush
-        uses: NishanthShankar/codepush-action@master
+      - name: Configuração do Node.js
+        uses: actions/setup-node@v3
         with:
-          args: release-react -d Production
-        env:
-          APPCENTER_ACCESS_TOKEN: ${{ secrets.APPCENTER_ACCESS_TOKEN }}
+          node-version: 14
+
+      - name: Verificação da versão do Node.js
+        run: node --version
