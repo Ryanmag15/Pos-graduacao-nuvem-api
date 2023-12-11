@@ -1,10 +1,14 @@
-name: conchayoro-pipeline
+name: jobs examples
 on:
-  push:
-    branches: [ "main" ]
+  push
 jobs:
-  build:
+  job1:
     runs-on: ubuntu-latest
     steps:
-      - name: executa comando
-        run: echo "Configuração inicial do pipeline"
+      - name: step do job1
+        run: echo Hello, world! job1.
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step do job2
+        run: echo Hello, world! Job2.
