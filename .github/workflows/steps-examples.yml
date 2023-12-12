@@ -4,11 +4,11 @@ jobs:
   marketplace:
     runs-on: ubuntu-latest
     steps:
-      - name: Example of use of marketplace
-        uses: actions/setup-node@v2
+      - name: Configuração do Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-      - name: shows node version configured.
+          node-version: 14
+      - name: Verificação da versão do Node.js
         run: node --version
   hello_world_job:
     runs-on: ubuntu-latest
