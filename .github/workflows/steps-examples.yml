@@ -7,7 +7,7 @@ jobs:
       - name: Configuração do Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: '14'
       - name: Verificação da versão do Node.js
         run: node --version
   hello_world_job:
